@@ -1,0 +1,620 @@
+  
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+html{
+background-color:grey;
+}
+body{
+margin-left:auto;
+margin-right:auto;
+border:2px solid black;
+width:70vw;
+box-sizing:border-box;
+background-color:black;
+color:white;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#head{
+display:flex;
+height:40px;
+margin-top:5px;
+width:99%;
+}
+
+#head1{
+width:40px;
+border-radius:50%;
+background-color:purple;
+position:relative;
+}
+
+#head11{
+position:absolute;
+border:2px solid black;
+width:20px;
+height:20px;
+border-radius:50%;
+background-position: center;
+background-color:yellow;
+top: 20%;
+left:20%;
+background-image:url("G:/music player images/ninja2.png");
+background-size:20px 20px;
+background-position: center;
+background-repeat: no-repeat;
+}
+
+#head2{
+width:40%;
+margin-top:5px;
+font-size:8px;
+font-weight:bold;
+margin-top:auto;
+margin-bottom:auto;
+padding-left:35px;
+}
+
+#head3{
+width:30%;
+margin-top:auto;
+margin-bottom:auto;
+}
+input[type=text] {
+    width: 80%;
+    box-sizing: border-box;
+    border: none;
+    border-radius:2px;
+    background-color: white;
+    background-image: url("G:/music player images/search1.png"),url("G:/music player images/speaker1.png");
+    background-position:left,right; 
+    outline: none;
+    background-size:contain;
+    background-repeat:no-repeat;
+    transition: width 0.4s ease-in-out;
+    padding:5px 0px 0px 20px;
+    font-family: Nunito;
+    font-size:8px;
+    padding-bottom:3px;;
+
+}
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+#head4{
+width:10%;
+border-radius:50%;
+background-image:url("G:/music player images/bell3.png");
+background-size: cover;
+background-position: center;
+background-size:contain;
+background-repeat: no-repeat;
+}
+
+#head5{
+width:40px;
+background-image:url(icon.jpeg);
+background-size: cover;
+background-repeat: no-repeat;
+border-radius:50%;
+}
+
+#mainaside{
+display:flex;
+justify-content:space-around;
+flex-direction:row;
+width:100%;
+height:100%;
+}
+
+main{
+margin-top:30px;
+height:540px;
+width:60%;
+}
+
+#container1{
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+width:100%;
+height:45%;
+box-sizing:border-box;
+background-color:#0a0a2b;
+}
+
+#div11{
+width:40%;
+background-image:url("G:/music player images/div65.jpeg");
+background-size:contain;
+background-repeat: no-repeat;
+background-size:100% 100%;
+border-radius:0 0 50px 0;
+box-shadow: 0 2px 30px 0 #23236b;
+}
+
+#div12{
+width:55%;
+padding-top:30px;
+min-width:132px;
+}
+
+#container2{
+display:flex;
+flex-direction:column;
+justify-content:space-around;
+width:100%;
+height:55%;
+box-sizing:border-box;
+}
+
+#div21{
+background-color:#141319;
+height:12%;
+margin-top:5px;
+display:flex;
+}
+
+#div22{
+background-color:#141319;
+height:12%;
+display:flex;
+
+}
+#div23{
+background-color:#141319;
+height:12%;
+display:flex;
+}
+#div24{
+background-color:#141319;
+height:12%;
+display:flex;
+}
+#div25{
+background-color:#141319;
+height:12%;
+display:flex;
+}
+#div26{
+background-color:#141319;
+height:12%;
+display:flex;
+}
+#div27{
+background-color:#141319;
+height:12%;
+display:flex;
+}
+aside{
+height:550px;
+min-width:160px;
+margin-top:30px;
+width:30%;
+}
+
+.dropdown {
+height:5%;
+border:2px solid red;
+position: relative;
+display: inline-block;
+border:2px solid red;
+}
+
+.dropbtn {
+color: white;
+font-size: 15px;
+cursor: pointer;
+margin-left:120px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+right: 0;
+background-color:pink;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+
+.dropdown-content a {
+color: black;
+text-decoration: none;
+padding-left:15px;
+display: block;
+font-size:10px;
+height:20px;
+padding-top:7px;
+
+}
+hr{width:90%;
+margin-left:auto;
+margiun-right:auto;
+margin-top:0;
+margin-bottom:0;
+color:#f3f6db;
+}
+.dropdown-content a:hover {background-color: #f1f1f1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+#containeraside1{
+display:flex;
+justify-content:space-around;
+flex-direction:column;
+height:47%;
+font-size:8px;
+min-width:155px;
+}
+
+#aside11{
+height:5%;
+}
+
+#aside12{
+height:26%;
+background-image:url("G:/music player images/div11.jpeg");
+background-size:contain;
+background-repeat: no-repeat;
+background-size:60px;
+border-radius:25px;
+}
+
+#aside13{
+height:26%;
+background-image:url("G:/music player images/div13.jpeg");
+background-size:contain;
+background-repeat: no-repeat;
+background-size:60px;
+border-radius:25px;
+}
+
+#aside14{
+height:26%;
+background-image:url("G:/music player images/div11.jpeg");
+background-size:contain;
+background-repeat: no-repeat;
+background-size:60px;
+border-radius:25px;
+}
+
+#containeraside2{
+display:flex;
+justify-content:space-around;
+flex-direction:column;
+height:50%;
+font-size:8px;
+box-sizing:border-box;
+min-width:155px;
+}
+
+#aside21{
+height:10%;
+
+}
+#aside22{
+height:10%;
+display:flex;
+}
+#aside23{
+height:10%;
+display:flex;
+}
+#aside24{
+height:10%;
+display:flex;
+}
+#aside25{
+height:10%;
+display:flex;
+}
+#aside26{
+height:10%;
+display:flex;
+}
+#aside27{
+height:10%;
+display:flex;
+}
+#aside28{
+height:10%;
+display:flex;
+}
+
+
+footer{
+height:60px;
+background:#272626;
+position:sticky;
+bottom:0;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer{
+display:flex;
+justify-content:space-around;
+width:100%;
+height:100%;
+}
+
+#footer1{
+display:flex;
+min-width:105px;
+}
+
+#footer2{
+width:30%;
+text-align: center;
+min-width:170px;
+}
+
+#outer{
+width:160px;
+height:2px;
+background-color:#7f7272;
+margin-left:auto;
+margin-right:auto;
+}
+
+#inner{
+width:50px;
+height:2px;
+background:red;
+}
+
+#footer3{
+display:flex;
+width:16%;
+min-width:75px;
+}
+
+#outer1{
+width:30px;
+height:2px;
+background-color:#7f7272;
+margin-top:30px;
+margin-right:9px;
+}
+
+#inner1{
+width:10px;
+height:2px;
+background:red;
+}
+
+@media screen and (max-width:900px){
+body{width:90vw;}
+}
+
+@media screen and (max-width:800px){
+body{width:95vw;}
+}
+@media screen and (max-width:600px){
+body{width:100vw;}
+}
+
+@media screen and (max-width:600px){
+#mainaside{
+flex-direction:column;}
+main{width:100%;}
+aside{margin-left:auto;
+margin-right:auto;
+width:70%;}
+}
+
+</style>
+</head>
+
+<body>
+<header>
+<div id="head">
+<div id="head1"><div id="head11"></div>
+</div>
+<span style="font-size:8px;margin-top:auto;
+margin-bottom:auto;font-weight:bold;padding-left:4px;">
+Ninja <bR>Studio</span>
+<div id="head2">Favourites</div>
+<div id="head3"> <input type="text" placeholder="Search.."></div>
+<div id="head4"></div>
+<div id="head5"></div>
+</div>
+</header>
+<div id="mainaside">
+<main>
+<div id="container1">
+<div id="div11"></div>
+<div id="div12">
+<span style="font-size:15px;font-weight: bold;">ColdPlay</span> <span style="float:right;font-size:7px;color:#7f7272;">851 Folllowers</span><br>
+<span style="font-size:9px;color:#7f7272;">British Band</span><br>
+<p style="font-size:7px;color:#7f7272;;">
+Coldplay is a British music brand that has enjoyed continuous success since their inception 
+in 1996 through their intelligent and soulful songs. 
+The band members are Chris Martin(lead vocals),
+jonny bucklaand(lead guitar),Guy 
+Berryman(bass guitar)and will 
+Champion(drums).</p><br>
+<input type="button" value="Play All" 
+style="
+background-image: linear-gradient(to right,#3737ad , #ff00ff);color:white;font-size:8px;border-radius: 2px;
+ box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ width:70px;height:20px;">
+<span style="padding-left:30px;font-size:10px;color:#7f7272;">follow</span><br>
+<span style="font-size:6px;padding-left:5px;color:#7f7272;">247 Tracks | 128 Albums</span>
+</div>
+</div>
+
+<div id="container2">
+<div id="div21">
+<span style="margin-top:auto;margin-bottom:auto;padding-left:5px;padding-right:8px;font-size:7px;color:#7f7272;">01</span>
+ <img style="margin-top:7px;margin-bottom:7px;"src="G:/music player images/div23.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-left: auto;margin-top:auto;margin-bottom:auto;padding-right:10px;" width="10" height="10"src="G:/music player images/like.png" />
+<span style="margin-top:auto;margin-bottom:auto;padding-right:15px;color:#7f7272;">+</span>
+</div>
+<div id="div22">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">02</span>
+ <img style="margin-top:7px;margin-bottom:7px;"src="G:/music player images/div31.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-left: auto;margin-top:auto;margin-bottom:auto;padding-right:10px;" width="10" height="10"src="G:/music player images/like.png" />
+<span style="margin-top:auto;margin-bottom:auto;padding-right:15px;color:#7f7272;">+</span>
+</div>
+<div id="div23">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">03</span>
+ <img style="margin-top:7px;margin-bottom:7px;"src="G:/music player images/div33.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-left: auto;margin-top:auto;margin-bottom:auto;padding-right:10px;" width="10" height="10"src="G:/music player images/like.png" />
+<span style="margin-top:auto;margin-bottom:auto;padding-right:15px;color:#7f7272;">+</span>
+</div>
+<div id="div24">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">04</span>
+ <img style="margin-top:7px;margin-bottom:7px;"src="G:/music player images/div34.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-left: auto;margin-top:auto;margin-bottom:auto;padding-right:10px;" width="10" height="10"src="G:/music player images/like.png" />
+<span style="margin-top:auto;margin-bottom:auto;padding-right:15px;color:#7f7272;">+</span>
+</div>
+<div id="div25">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">05</span>
+ <img style="margin-top:7px;margin-bottom:7px;"src="G:/music player images/div35.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-left: auto;margin-top:auto;margin-bottom:auto;padding-right:10px;" width="10" height="10"src="G:/music player images/like.png" />
+<span style="margin-top:auto;margin-bottom:auto;padding-right:15px;color:#7f7272;">+</span>
+</div>
+<div id="div26">
+<span style="margin-top:auto;margin-bottom:auto;font-size:6px;padding-right:8px;padding-left:5px;color:#7f7272;">06</span>
+ <img style="margin-top:7px;margin-bottom:7px;"src="G:/music player images/div36.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:6px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-left: auto;margin-top:auto;margin-bottom:auto;padding-right:10px;" width="10" height="10"src="G:/music player images/like.png" />
+<span style="margin-top:auto;margin-bottom:auto;padding-right:15px;color:#7f7272;">+</span>
+</div>
+<div id="div27">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">07</span>
+ <img style="margin-top:7px;margin-bottom:7px;"src="G:/music player images/div36.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-left: auto;margin-top:auto;margin-bottom:auto;padding-right:10px;" width="10" height="10"src="G:/music player images/like.png" />
+<span style="margin-top:auto;margin-bottom:auto;padding-right:15px;color:#7f7272;">+</span>
+</div>
+</div>
+</main>
+<aside>
+<div id="containeraside1">
+<div id="aside11">
+<span style="font-weight:bold;font-size:10px;">Similar Artists</span> 
+<span style="padding-left:60px;padding-top:5px;color:#c5c4c4;">View All</span>
+</div>
+<div id="aside12">
+<span style="padding-left:146px;font-size:10px;">...</span><br><br>
+<span style="padding-left:75px">hello</span> <span style="padding-left:45px;color:#7f7272;">4:04</span><br><br>
+<span style="padding-left:75px;color:#7f7272;">hello</span>
+</div>
+<div id="aside13">
+<span style="padding-left:146px;font-size:10px;">...</span><br><br>
+<span style="padding-left:75px">hello</span> <span style="padding-left:45px;color:#7f7272;">4:04</span><br><br>
+<span style="padding-left:75px;color:#7f7272;">hello</span>
+</div>
+<div id="aside14">
+<span style="padding-left:146px;font-size:10px;">...</span><br><br>
+<span style="padding-left:75px">hello</span> <span style="padding-left:45px;color:#7f7272;">4:04</span><br><br>
+<span style="padding-left:75px;color:#7f7272;">hello</span>
+</div>
+</div>
+
+<div id="containeraside2">
+<div id="aside21">
+<span style="font-weight:bold;font-size:10px;">Recently Played</span>
+<span style="padding-left:60px;color:#c5c4c4;">View All</span>
+</div>
+<div id="aside22">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">01</span>
+ <img src="G:/music player images/div36.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-top:auto;margin-bottom:auto;margin-left:70px;" width="10" height="10"src="G:/music player images/like.png" />
+</div>
+<div id="aside23">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">02</span>
+ <img src="G:/music player images/div61.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-top:auto;margin-bottom:auto;margin-left:70px;" width="10" height="10"src="G:/music player images/like.png" />
+</div>
+<div id="aside24">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">03</span>
+ <img src="G:/music player images/div62.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-top:auto;margin-bottom:auto;margin-left:70px;" width="10" height="10"src="G:/music player images/like.png" />
+</div>
+<div id="aside25">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">04</span>
+ <img src="G:/music player images/div63.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-top:auto;margin-bottom:auto;margin-left:70px;" width="10" height="10"src="G:/music player images/like.png" />
+</div>
+<div id="aside26">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">05</span>
+ <img src="G:/music player images/div64.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-top:auto;margin-bottom:auto;margin-left:70px;" width="10" height="10"src="G:/music player images/like.png"/>
+</div>
+<div id="aside27">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">06</span>
+ <img src="G:/music player images/div12.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-top:auto;margin-bottom:auto;margin-left:70px;" width="10" height="10"src="G:/music player images/like.png"/>
+</div>
+<div id="aside28">
+<span style="margin-top:auto;margin-bottom:auto;font-size:7px;padding-right:8px;padding-left:5px;color:#7f7272;">07</span>
+ <img src="G:/music player images/div11.jpeg" width="30"/>
+<span style="margin-top:auto;margin-bottom:auto;padding-left:8px;font-size:7px;">hello2<br><span style="color:#7f7272;">hello3</span></span>
+<img style="margin-top:auto;margin-bottom:auto;margin-left:70px;" width="10" height="10"src="G:/music player images/like.png"/>
+</div>
+</div>
+</aside>
+</div>
+<<footer>
+<div id="footer">
+<div id="footer1">
+<img style="margin-top:auto;margin-right:5px;margin-bottom:auto;border-radius:16px;"src="G:/music player images/div12.jpeg" width="45" height="45"/>
+<span style="font-size:8px;padding-top:10px;">Imagine by John
+<span style=""><img style="padding-left:7px;"src="G:/music player images/like.png" width="15"/>
+<img style="padding-left:2px;"src="G:/music player images/stop.png" width="15"/></span>
+<br>
+<span style="font-size:7px;color:#7f7272;">John Lennon</span>
+
+</div>
+<div id="footer2">
+<img style="padding-bottom:10px;"src="G:/music player images/refresh.png" width="20"/>
+<img style="padding-bottom:10px;"src="G:/music player images/left.png" width="20"/>
+<img style=""src="G:/music player images/pause.png" width="40"/>
+<img style="padding-bottom:10px;  transform: scaleX(-1);
+        filter: FlipH;"src="G:/music player images/left.png" width="20"/>
+<img style="margin-right:10px;padding-bottom:10px;"src="G:/music player images/refresh.png" width="20"/>
+<div id="outer">
+<div id="inner"><img style="position:absolute;margin-left:20px;top:70%;"src="G:/music player images/dot.png" width="7"/></div>
+
+</div>
+</div>
+<div id="footer3">
+<img style="margin-right:5px;margin-top:25px;"src="G:/music player images/menu.png" width="10" height="10"/>
+<img style="margin-right:5px;margin-top:25px;"src="G:/music player images/dj.png" width="10" height="10"/>
+<img style="margin-right:5px;margin-top:25px;"src="G:/music player images/speaker.png" width="10" height="10"/>
+<div id="outer1">
+<div id="inner1"><img style="position:absolute;margin-left:5px;top:46%;"src="G:/music player images/dot.png" width="7"/></div>
+</div>
+<img style="margin-top:25px;"src="G:/music player images/resize.png" width="10" height="10"/>
+</div>
+</div>
+</footer>
+</body>
+</html>
+
+
